@@ -1,0 +1,41 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:gaiax:data_asset:container;1",
+    "@type": "Interface",
+    "extends": ["dtmi:gaiax:data_asset:base;1"],
+    "displayName": "Data Asset Container",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Entrypoint",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Entrypoint",
+            "description": "The command to execute, or script to run inside the container-image."
+        },
+        {
+            "@type": "Property",
+            "name": "Image",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Image",
+            "description": "Name of the container image."
+        },
+        {
+            "@type": "Property",
+            "name": "Tag",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Tag",
+            "description": "Tag of the container image."
+        },
+        {
+            "@type": "Property",
+            "name": "Checksum",
+            "schema": "string",
+            "writable": false,
+            "displayName": "Checksum",
+            "description": "Checksum of the container image."
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:gaiax:data_asset:stream;1",
+    "@type": "Interface",
+    "extends": ["dtmi:gaiax:data_asset:base;1"],
+    "displayName": "Data Asset Stream",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "ContentType",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Content Type",
+            "description": "The mime-type of the stream."
+        },
+        {
+            "@type": "Property",
+            "name": "ResourceLocation",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Resource Location",
+            "description": "Stream URL.",
+            "comment": "Supports http(s):// and ipfs:// URLs and/or others."
+        }
+    ]
+}

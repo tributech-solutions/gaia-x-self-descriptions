@@ -1,0 +1,173 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:gaiax:data_asset:base;1",
+    "@type": "Interface",
+    "displayName": "Data Asset SD",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "DID",
+            "schema": "string",
+            "writable": true,
+            "displayName": "DID",
+            "description": "Unique identifier of the data asset, Decentralized Identifier. A DID is a unique identifier that can be resolved or de-referenced to a standard resource describing the entity (a DID Document or DDO)."
+        },
+        {
+            "@type": "Property",
+            "name": "Name",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Name",
+            "description": "Title of the data asset featuring a high level description for quick reference."
+        },
+        {
+            "@type": "Property",
+            "name": "Description",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Description",
+            "description": "More detailed description of the data asset, potentially featuring rich text and markup."
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Active",
+                        "displayName": "Active",
+                        "enumValue": "ACTIVE"
+                    },
+                    {
+                        "name": "Revoked",
+                        "displayName": "Revoked",
+                        "enumValue": "REVOKED"
+                    },
+                    {
+                        "name": "EOL",
+                        "displayName": "EOL",
+                        "enumValue": "EOL"
+                    },
+                    {
+                        "name": "Deprecated",
+                        "displayName": "Deprecated",
+                        "enumValue": "DEPRECATED"
+                    }
+                ]
+            },
+            "writable": false,
+            "displayName": "Status",
+            "description": "The current status of the data asset self-description."
+        },
+        {
+            "@type": "Property",
+            "name": "Rights",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Rights",
+            "description": "Additional information regarding copyrights / usage rights."
+        },
+        {
+            "@type": "Property",
+            "name": "Licence",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Licence",
+            "description": "Short name referencing the license of the asset (e.g. Public Domain, CC-0, CC-BY, No License Specified, etc. ). If it's not specified, the following value will be added: 'No License Specified'."
+        },
+        {
+            "@type": "Property",
+            "name": "Type",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "File",
+                        "displayName": "File",
+                        "enumValue": "FILE"
+                    },
+                    {
+                        "name": "Algorithm",
+                        "displayName": "Algorithm",
+                        "enumValue": "ALGORITHM"
+                    },
+                    {
+                        "name": "Stream",
+                        "displayName": "Stream",
+                        "enumValue": "STREAM"
+                    },
+                    {
+                        "name": "Database",
+                        "displayName": "Database",
+                        "enumValue": "DATABASE"
+                    },
+                    {
+                        "name": "Container",
+                        "displayName": "Container",
+                        "enumValue": "CONTAINER"
+                    }
+                ]
+            },
+            "writable": true,
+            "displayName": "Type",
+            "description": "The type of the data-asset."
+        },
+        {
+            "@type": "Property",
+            "name": "DateCreated",
+            "schema": "dateTime",
+            "writable": false,
+            "displayName": "Creation Date"
+        },
+        {
+            "@type": "Property",
+            "name": "DateModified",
+            "schema": "dateTime",
+            "writable": false,
+            "displayName": "Modify Date"
+        },
+        {
+            "@type": "Property",
+            "name": "DatePublish",
+            "schema": "dateTime",
+            "writable": false,
+            "displayName": "Publish Date"
+        },
+        {
+            "@type": "Property",
+            "name": "CopyrightHolder",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Copyright Holder",
+            "description": "Name of the entity providing this data-asset. Human readable version."
+        },
+        {
+            "@type": "Property",
+            "name": "Standard",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Standard",
+            "description": "Provides information about the standards applied, i.e. ISO10303"
+        },
+        {
+            "@type": "Property",
+            "name": "StandardReference",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Standard Reference",
+            "description": "Provides a link to the schema and/or more details about the implemented standard."
+        },
+        {
+            "@type": "Relationship",
+            "name": "OwnedBy",
+            "minMultiplicity": 0,
+            "maxMultiplicity": 1,
+            "target": "dtmi:gaiax:provider:base;1",
+            "displayName": "Owner",
+            "description": "The owner of the data asset."
+        }
+    ]
+}

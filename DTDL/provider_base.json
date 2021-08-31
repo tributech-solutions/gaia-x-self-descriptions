@@ -1,0 +1,26 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:gaiax:provider:base;1",
+    "@type": "Interface",
+    "displayName": "Provider",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "DID",
+            "schema": "string",
+            "writable": true,
+            "displayName": "DID",
+            "description": "The Unique identifier of the publisher.",
+            "comment": "DID = Decentralized identifier"
+        },
+        {
+            "@type": "Relationship",
+            "name": "HasDataAssets",
+            "minMultiplicity": 0,
+            "maxMultiplicity": 10,
+            "target": "dtmi:gaiax:data_asset:base;1",
+            "displayName": "Provides Assets",
+            "description": "Contains all data assets provided by the provider."
+        }
+    ]
+}
