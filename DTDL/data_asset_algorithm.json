@@ -1,0 +1,26 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:gaiax:data_asset:algorithm;1",
+    "@type": "Interface",
+    "extends": ["dtmi:gaiax:data_asset:base;1"],
+    "displayName": "Data Asset Algorithm",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Language",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Language",
+            "description": "The language used to implement the software.",
+            "comment": "e.g. JavaScript, Python, ..."
+        },
+        {
+            "@type": "Property",
+            "name": "Format",
+            "schema": "string",
+            "writable": true,
+            "displayName": "Format",
+            "description": "Packaging format of the software."
+        }
+    ]
+}
