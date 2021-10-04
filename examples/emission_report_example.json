@@ -1,0 +1,29 @@
+{
+  "digitalTwinsFileInfo": {
+    "fileVersion": "1.0.0"
+  },
+  "digitalTwinsGraph": {
+    "digitalTwins": [
+      {
+	    "$dtId": "b32c701c-0167-4f6c-b11b-ecc9d217f504",
+        "$etag": "W/\"7a3d9817-23e1-4380-aab2-50a9fff6960d\"",
+        "StandardReference": "https://www.iso.org/obp/ui#iso:std:iso:27920:dis:ed-1:v1:en",
+        "Status": "ACTIVE",
+        "Description": "Calculated data based on L1 and L2 emissions for the month of september.",
+        "ContentType": "text/csv",
+        "Standard": "ISO/DIS 27920",
+        "CopyrightHolder": "Company Y GmbH",
+        "Name": "CO² Emission Report from Company Y - 09/21",
+        "Type": "FILE",
+        "Rights": "Public Domain",
+        "ResourceLocation": "ftp://company-y.de/public/co2/2021/report_raw_09.csv",
+        "Licence": "Public Domain",
+        "DID": "did:example:1234567890",
+        "$metadata": {
+          "$model": "dtmi:gaiax:data_asset:file;1"
+        }
+      }
+    ],
+    "relationships": []
+  }
+}
